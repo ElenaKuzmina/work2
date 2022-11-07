@@ -31,5 +31,6 @@ def debt(ship, *data):
     con.close()
 
 
+# testing example
 data = [(1, 100), (2, 20), (5, 50), (7, 50)]
 debt("Arabella", *data)

@@ -7,7 +7,8 @@ con = sqlite3.connect(filename)
 cur = con.cursor()
 result = cur.execute(f"""SELECT s.ship, c.captain, n.navigator, year, benefit 
 FROM ships as s, captains as c, navigators as n  
-WHERE (s.id_cap = (SELECT id_cap FROM captains WHERE captain = 'Billy Bons') 
+WHERE s.id_cap = c.id_cap AND s.id_navigator = n.id_navigator AND 
+(s.id_cap = (SELECT id_cap FROM captains WHERE captain = 'Billy Bons') 
 OR s.id_navigator = (SELECT id_navigator FROM navigators WHERE navigator = 'Billy Bons')) 
 AND year BETWEEN 1760 AND 1766 
 ORDER BY s.id""").fetchall()

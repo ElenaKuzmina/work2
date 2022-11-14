@@ -1,0 +1,6 @@
+dead_mans_chest.csv:
+id;thing_name;description;cost;state
+1;small coin;a little wrinkled;20;shabby
+2;a worn frock coat;dirty torn;10;worn
+3;a coin from yellow metal;slightly deformed;50;old
+4;wooden leg;polished;5;old
